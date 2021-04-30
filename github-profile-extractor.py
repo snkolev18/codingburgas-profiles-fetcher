@@ -49,7 +49,7 @@ try:
     button_element = WebDriverWait(driver, 3.5).until(EC.presence_of_element_located((By.TAG_NAME, "button")))
     button_element.click()
 finally:
-    time.sleep(2)
+    time.sleep(5)
 
 email = driver.find_element_by_id("i0116")
 email.send_keys(input("Enter your Microsoft Email: "))
@@ -58,7 +58,7 @@ try:
     next = driver.find_element_by_xpath("//input[@type='submit' and @value='Next']")
     next.click()
 finally:
-    time.sleep(2)
+    time.sleep(5)
 
 passwd = driver.find_element_by_id("i0118")
 passwd.send_keys(input("Enter your Microsoft password: "))
@@ -67,13 +67,13 @@ try:
     next = driver.find_element_by_xpath("//input[@type='submit' and @value='Sign in']")
     next.click()
 finally:
-    time.sleep(2)
+    time.sleep(5)
 
 try:
     next = driver.find_element_by_xpath("//input[@type='button' and @value='No']")
     next.click()
 finally:
-    time.sleep(2)
+    time.sleep(5)
 
 driver.get("https://github.com/orgs/codingburgas/people")
 
